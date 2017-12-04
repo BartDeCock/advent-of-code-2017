@@ -12,12 +12,32 @@ public class Matrix {
     }
 
     public void add(Cell cell) {
-//        System.out.println("Add cell " + cell);
         matrix[cell.getX()][cell.getY()] = cell;
         cells.put(cell.getValue(), cell);
     }
 
     public Cell getCell(Integer given) {
-       return cells.get(given);
+        return cells.get(given);
+    }
+
+    public Cell getCell(int x, int y) {
+        return matrix[x][y];
+    }
+
+    public void initAllZeros() {
+        for (int x = 0; x < matrix.length; x++) {
+            for (int y = 0; y < matrix[x].length; y++) {
+                matrix[x][y] = new Cell(x, y, 0);
+            }
+        }
+    }
+
+    Integer getFirstValueHigherThan(int puzzleInput) {
+        return cells.values().stream()
+                .filter(cell -> cell.getValue() > puzzleInput)
+                .map(cell -> cell.getValue())
+                .sorted()
+                .findFirst()
+                .orElse(0);
     }
 }

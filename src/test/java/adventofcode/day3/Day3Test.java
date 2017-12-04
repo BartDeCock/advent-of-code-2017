@@ -47,10 +47,22 @@ public class Day3Test {
     }
 
     @Test
+    public void testPart2() {
+        int puzzleInput = 806;
+        Matrix matrix = new Day3().calculatePart2(puzzleInput);
+        assertThat(matrix.getCell(15,15).getValue()).isEqualTo(1);
+        assertThat(matrix.getCell(15,16).getValue()).isEqualTo(1);
+        assertThat(matrix.getCell(14,16).getValue()).isEqualTo(2);
+        assertThat(matrix.getCell(14,15).getValue()).isEqualTo(4);
+        assertThat(matrix.getCell(14,14).getValue()).isEqualTo(5);
+        assertThat(matrix.getFirstValueHigherThan( 747)).isEqualTo(806);
+    }
+
+    @Test
     public void calculatePart2() {
         int puzzleInput = 265149;
-        Map<Integer, Cell> cells = new Day3().calculatePart2(puzzleInput);
-        System.out.println(cells.get(1));
+        Matrix matrix = new Day3().calculatePart2(puzzleInput);
+        assertThat(matrix.getFirstValueHigherThan(puzzleInput)).isEqualTo(266330);
     }
 
     private int getManhattanDistance(Cell c1, Cell c2) {

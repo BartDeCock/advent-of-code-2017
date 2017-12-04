@@ -1,7 +1,5 @@
 package adventofcode.day3;
 
-import java.util.Map;
-
 public class Up implements Step {
     private Cell currentCell;
 
@@ -13,11 +11,6 @@ public class Up implements Step {
     public Cell calculateCoordinates() {
         currentCell = new Cell(currentCell.getX() - 1, currentCell.getY(), currentCell.getValue()+1);
         return currentCell;
-    }
-
-    @Override
-    public Cell calculateCellValue(Map<Integer, Cell> cells) {
-        return null;
     }
 
     @Override
