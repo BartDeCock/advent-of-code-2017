@@ -27,5 +27,4 @@ public class Day5Test {
         assertThat(new Day5().calculatePart2("day5-input.txt")).isEqualTo(21841249);
     }
 
-
 }
