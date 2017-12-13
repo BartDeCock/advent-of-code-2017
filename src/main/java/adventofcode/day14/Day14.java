@@ -1,8 +1,8 @@
-package adventofcode;
+package adventofcode.day14;
 
 import adventofcode.util.InputReader;
 
-public class Day13 {
+public class Day14 {
 
     int calculatePart1(String filename) {
         new InputReader().getLinesAsString(filename);
@@ -11,6 +11,7 @@ public class Day13 {
     }
 
     int calculatePart2(String filename) {
+        new InputReader().getLinesAsString(filename);
 
         return 0;
     }
