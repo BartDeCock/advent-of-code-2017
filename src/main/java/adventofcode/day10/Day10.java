@@ -43,19 +43,22 @@ public class Day10 {
     }
 
     String calculatePart2(String filename, List<Integer> given) {
-        List<Integer> lengths = new ArrayList<>();
+
         char[] chars = new InputReader().getLinesAsString(filename).get(0).toCharArray();
+        return knotHash(given, chars);
+    }
+
+    private String knotHash(List<Integer> given, char[] chars) {
+        List<Integer> lengths = new ArrayList<>();
         for (int i = 0; i< chars.length; i++) {
             lengths.add((int) chars[i]);
         }
         lengths.addAll(Lists.newArrayList(17, 31, 73, 47, 23));
-        System.out.println("lengths: " + lengths);
         //
         final int[] currentPos = {0};
         final int[] skip = {0};
 
         for (int c=0;c<64;c++) {
-            System.out.println("Starting round " + c + " - currentPos=" + currentPos[0]);
             lengths.forEach(l -> {
                 executeConversion(given, given.size(), currentPos, skip, l);
             });
@@ -74,6 +77,10 @@ public class Day10 {
             sb.append(str);
         });
         return sb.toString();
+    }
+
+    public String knotHash(String input) {
+        return knotHash(Observable.range(0, 256).toList().blockingGet(), input.toCharArray());
     }
 
 
