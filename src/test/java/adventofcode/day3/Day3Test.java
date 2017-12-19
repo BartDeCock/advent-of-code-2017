@@ -1,8 +1,7 @@
 package adventofcode.day3;
 
+import adventofcode.util.Cell;
 import org.junit.Test;
-
-import java.util.Map;
 
 import static java.lang.Math.abs;
 import static org.assertj.core.api.Assertions.assertThat;

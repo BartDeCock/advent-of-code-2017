@@ -1,5 +1,7 @@
 package adventofcode.day3;
 
+import adventofcode.util.Cell;
+
 import static java.lang.Math.ceil;
 import static java.lang.Math.sqrt;
 

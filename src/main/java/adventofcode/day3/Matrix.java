@@ -1,5 +1,7 @@
 package adventofcode.day3;
 
+import adventofcode.util.Cell;
+
 import java.util.HashMap;
 import java.util.Map;
 

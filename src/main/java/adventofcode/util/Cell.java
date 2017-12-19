@@ -1,4 +1,4 @@
-package adventofcode.day3;
+package adventofcode.util;
 
 public class Cell {
     private int x=0;
@@ -14,6 +14,8 @@ public class Cell {
         this(x,y);
         this.value = value;
     }
+
+
 
     public int getX() {
         return x;

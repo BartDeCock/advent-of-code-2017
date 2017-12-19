@@ -1,5 +1,7 @@
 package adventofcode.day3;
 
+import adventofcode.util.Cell;
+
 public interface Step {
     Cell calculateCoordinates();
 

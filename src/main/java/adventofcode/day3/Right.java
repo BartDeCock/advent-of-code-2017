@@ -1,5 +1,7 @@
 package adventofcode.day3;
 
+import adventofcode.util.Cell;
+
 public class Right implements Step {
     private Cell currentCell;
 
