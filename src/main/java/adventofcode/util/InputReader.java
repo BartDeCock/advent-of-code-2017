@@ -6,9 +6,6 @@ import java.io.FileReader;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Pattern;
-
-import static java.util.stream.Collectors.toList;
 
 public class InputReader {
 

@@ -4,8 +4,6 @@ import adventofcode.util.StringConverter;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Day1 {
     private List<Integer> input = new ArrayList<>();
