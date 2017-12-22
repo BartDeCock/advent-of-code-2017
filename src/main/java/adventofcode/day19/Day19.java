@@ -1,20 +1,17 @@
 package adventofcode.day19;
 
+import adventofcode.util.Direction;
 import adventofcode.util.InputReader;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static adventofcode.day19.Day19.Direction.*;
+import static adventofcode.util.Direction.*;
 
 public class Day19 {
     private char[][] maze = new char[201][201];
     private List<Character> result = new ArrayList<>();
     private int steps = 0;
-
-    enum Direction {
-        UP, DOWN, LEFT, RIGHT;
-    }
 
     String part1(String filename) {
         initMaze(filename);

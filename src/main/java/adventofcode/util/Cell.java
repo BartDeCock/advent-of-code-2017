@@ -1,28 +1,15 @@
 package adventofcode.util;
 
-public class Cell {
-    private int x=0;
-    private int y=0;
+public class Cell extends Point {
     private int value=0;
 
     public Cell(int x, int y) {
-        this.x = x;
-        this.y = y;
+        super(x,y);
     }
 
     public Cell(int x, int y, int value) {
-        this(x,y);
+        super(x,y);
         this.value = value;
-    }
-
-
-
-    public int getX() {
-        return x;
-    }
-
-    public int getY() {
-        return y;
     }
 
     public int getValue() {
@@ -40,5 +27,23 @@ public class Cell {
                 ", y=" + y +
                 ", value=" + value +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Cell cell = (Cell) o;
+
+        if (x != cell.x) return false;
+        return y == cell.y;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = x;
+        result = 31 * result + y;
+        return result;
     }
 }
